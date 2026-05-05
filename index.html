@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maxify Studio | Premium Web Development</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --sky-primary: #38bdf8;
+            --slate-dark: #0f172a;
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: #ffffff;
+            color: #1e293b;
+            scroll-behavior: smooth;
+        }
+        /* Custom Mesh Gradient Background */
+        .mesh-bg {
+            background-color: #ffffff;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(56, 189, 248, 0.15) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(129, 140, 248, 0.1) 0px, transparent 50%);
+            background-attachment: fixed;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(56, 189, 248, 0.1);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glass-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--sky-primary);
+            box-shadow: 0 20px 40px rgba(56, 189, 248, 0.1);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #0ea5e9 0%, #6366f1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f5f9; }
+        ::-webkit-scrollbar-thumb { background: #bae6fd; border-radius: 10px; }
+    </style>
+</head>
+<body class="mesh-bg">
+
+    <header class="fixed w-full top-0 z-50 transition-all duration-300 px-6 py-4" id="header">
+        <nav class="max-w-7xl mx-auto flex justify-between items-center glass-card px-6 py-3 rounded-2xl">
+            <a href="#" class="text-xl font-extrabold tracking-tighter text-slate-900">
+                MAXIFY<span class="text-sky-500">STUDIO</span>
+            </a>
+            
+            <div class="hidden md:flex space-x-8 font-semibold text-sm uppercase tracking-wider">
+                <a href="#home" class="hover:text-sky-500 transition">Home</a>
+                <a href="#services" class="hover:text-sky-500 transition">Services</a>
+                <a href="#faq" class="hover:text-sky-500 transition">FAQ</a>
+                <a href="#contact" class="hover:text-sky-500 transition">Contact</a>
+            </div>
+
+            <a href="https://wa.me/919361449850" class="bg-slate-900 text-white text-xs font-bold px-5 py-2.5 rounded-xl hover:bg-sky-600 transition">
+                LET'S TALK
+            </a>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="min-h-screen flex items-center pt-24 px-6" id="home">
+            <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <h2 class="text-sky-500 font-bold mb-4 tracking-widest uppercase text-sm">Ambitious Web Solutions</h2>
+                    <h1 class="text-5xl md:text-7xl font-extrabold text-slate-900 leading-tight mb-6">
+                        Bringing Digital <br> <span class="gradient-text">Excellence</span> to Life.
+                    </h1>
+                    <p class="text-slate-500 text-lg mb-10 max-w-lg leading-relaxed">
+                        Precision-engineered websites with a focus on speed, mobile responsiveness, and delivering results ahead of schedule.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#services" class="bg-sky-500 text-white px-8 py-4 rounded-2xl font-bold shadow-lg shadow-sky-200 hover:bg-sky-600 transition transform hover:-translate-y-1">
+                            Explore Services
+                        </a>
+                        <a href="tel:+919361449850" class="glass-card px-8 py-4 rounded-2xl font-bold text-slate-700 hover:bg-white transition">
+                            Call Direct
+                        </a>
+                    </div>
+                </div>
+                <div class="relative" data-aos="zoom-in">
+                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80" alt="Work" class="rounded-[3rem] shadow-2xl">
+                    <div class="absolute -bottom-6 -right-6 glass-card p-8 rounded-3xl shadow-xl hidden md:block">
+                        <p class="text-3xl font-extrabold text-sky-500">100%</p>
+                        <p class="text-slate-600 font-bold">Client Satisfaction</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24 px-6" id="services">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900">What We <span class="text-sky-500">Deliver</span></h2>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="glass-card p-10 rounded-[2rem]" data-aos="fade-up" data-aos-delay="100">
+                        <div class="bg-sky-100 w-14 h-14 rounded-2xl flex items-center justify-center mb-6">
+                            <i class="fas fa-rocket text-sky-500 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Fastest Delivery</h3>
+                        <p class="text-slate-500">We respect your timeline. Projects are delivered on time, every time, without cutting corners on quality.</p>
+                    </div>
+
+                    <div class="glass-card p-10 rounded-[2rem]" data-aos="fade-up" data-aos-delay="200">
+                        <div class="bg-sky-100 w-14 h-14 rounded-2xl flex items-center justify-center mb-6">
+                            <i class="fas fa-mobile-screen text-sky-500 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Mobile Priority</h3>
+                        <p class="text-slate-500">In a mobile-first world, your site will work seamlessly on every screen size, from phones to desktops.</p>
+                    </div>
+
+                    <div class="glass-card p-10 rounded-[2rem]" data-aos="fade-up" data-aos-delay="300">
+                        <div class="bg-sky-100 w-14 h-14 rounded-2xl flex items-center justify-center mb-6">
+                            <i class="fas fa-gem text-sky-500 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Premium UI/UX</h3>
+                        <p class="text-slate-500">Clean, modern designs using glassmorphism and smooth animations to keep your users engaged.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24 px-6 bg-slate-50/50" id="faq">
+            <div class="max-w-4xl mx-auto">
+                <div class="flex flex-col md:flex-row gap-12">
+                    <div class="md:w-1/3" data-aos="fade-right">
+                        <h2 class="text-4xl font-extrabold text-slate-900 mb-4">Good to <span class="text-sky-500">Know</span></h2>
+                        <p class="text-slate-500">Common questions about how Maxify Studio handles your projects.</p>
+                    </div>
+                    <div class="md:w-2/3 space-y-4" data-aos="fade-left">
+                        <div class="bg-white p-6 rounded-2xl border border-sky-100 shadow-sm">
+                            <h4 class="font-bold text-slate-900 mb-2">How do you ensure project quality?</h4>
+                            <p class="text-slate-500 text-sm">Every line of code is written with performance in mind. We use modern frameworks to ensure speed and SEO optimization.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl border border-sky-100 shadow-sm">
+                            <h4 class="font-bold text-slate-900 mb-2">What is the communication process?</h4>
+                            <p class="text-slate-500 text-sm">I provide daily or milestone-based updates via WhatsApp or Email so you are never in the dark about your project.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24 px-6" id="contact">
+            <div class="max-w-5xl mx-auto glass-card rounded-[3rem] p-12 md:p-20 overflow-hidden relative">
+                <div class="relative z-10 text-center">
+                    <h2 class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6">Ready to Start?</h2>
+                    <p class="text-slate-600 text-lg mb-10">Get a custom quote within 12 hours. Your vision, our code.</p>
+                    <div class="flex flex-col md:flex-row justify-center gap-6">
+                        <a href="https://wa.me/919361449850" class="flex items-center justify-center bg-[#25D366] text-white px-10 py-4 rounded-2xl font-bold hover:opacity-90 transition">
+                            <i class="fab fa-whatsapp text-2xl mr-3"></i> WhatsApp Me
+                        </a>
+                        <a href="tel:+919361449850" class="flex items-center justify-center bg-slate-900 text-white px-10 py-4 rounded-2xl font-bold hover:bg-slate-800 transition">
+                            <i class="fas fa-phone mr-3"></i> +91 9361449850
+                        </a>
+                    </div>
+                </div>
+                <div class="absolute -top-24 -right-24 w-64 h-64 bg-sky-100 rounded-full blur-3xl opacity-50"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-12 border-t border-slate-100 px-6">
+        <div class="max-w-7xl mx-auto flex flex-col md:row justify-between items-center gap-8">
+            <p class="font-extrabold text-xl">MAXIFY<span class="text-sky-500">STUDIO</span></p>
+            
+            <div class="flex space-x-6">
+                <a href="https://www.instagram.com/maxwebworks_?igsh=MXhpdjdwdmw3bG04Yg==" class="w-12 h-12 glass-card rounded-full flex items-center justify-center text-slate-600 hover:text-sky-500">
+                    <i class="fab fa-instagram text-xl"></i>
+                </a>
+                <a href="https://wa.me/919361449850" class="w-12 h-12 glass-card rounded-full flex items-center justify-center text-slate-600 hover:text-sky-500">
+                    <i class="fab fa-whatsapp text-xl"></i>
+                </a>
+            </div>
+            
+            <p class="text-slate-400 text-xs">© 2026 Maxify Studio. Designed for results.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Simple Header Scroll Effect
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('py-2');
+            } else {
+                header.classList.remove('py-2');
+            }
+        });
+    </script>
+</body>
+</html>
