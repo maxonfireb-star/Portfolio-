@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maxify Studio | Digital Craftsmanship</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --sky-500: #0ea5e9;
+            --sky-400: #38bdf8;
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: #ffffff;
+            color: #0f172a;
+            overflow-x: hidden;
+        }
+        .site-bg {
+            background: radial-gradient(circle at 50% -10%, #f0f9ff 0%, #ffffff 100%);
+        }
+        .tab-nav {
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(24px) saturate(180%);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            box-shadow: 0 4px 30px rgba(15, 23, 42, 0.03);
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, var(--sky-500) 0%, #6366f1 100%);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .btn-primary:hover {
+            box-shadow: 0 10px 25px -5px rgba(14, 165, 233, 0.4);
+            transform: translateY(-2px);
+        }
+        /* Glassmorphism & Liquid Glass Styles */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.45);
+            backdrop-filter: blur(16px) saturate(120%);
+            border: 1px solid rgba(255, 255, 255, 0.7);
+            box-shadow: 0 8px 32px 0 rgba(15, 23, 42, 0.04);
+        }
+        .liquid-glass-preview {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.3), 0 20px 40px rgba(0, 0, 0, 0.05);
+        }
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .tech-track {
+            display: flex;
+            width: calc(250px * 10);
+            animation: scroll 20s linear infinite;
+        }
+    </style>
+</head>
+<body class="site-bg">
+
+    <header class="fixed w-full top-6 z-50 px-6">
+        <nav class="max-w-3xl mx-auto tab-nav rounded-full px-6 py-2 flex justify-between items-center">
+            <a href="#" class="flex items-center space-x-2 font-extrabold tracking-tighter text-lg text-slate-900">
+                <span>MAXIFY STUDIO</span><span class="text-sky-500">.</span>
+            </a>
+            
+            <div class="hidden md:flex space-x-6 text-[13px] font-bold text-slate-500 uppercase tracking-widest">
+                <a href="#home" class="hover:text-sky-500 transition">Home</a>
+                <a href="#work" class="hover:text-sky-500 transition">Work</a>
+                <a href="#services" class="hover:text-sky-500 transition">Services</a>
+            </div>
+
+            <a href="https://wa.me/919361449850" class="btn-primary text-white text-[11px] font-bold px-5 py-2 rounded-full uppercase tracking-tighter">
+                Start Project
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="pt-44 pb-20 px-6 text-center">
+            <div class="max-w-4xl mx-auto">
+                <div data-aos="fade-up" class="inline-flex items-center space-x-2 bg-sky-50 border border-sky-100 px-4 py-1.5 rounded-full text-sky-600 text-xs font-bold mb-8">
+                    <span class="relative flex h-2 w-2">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-sky-500"></span>
+                    </span>
+                    <span>Available for 2 new clients this month</span>
+                </div>
+                
+                <h1 data-aos="fade-up" data-aos-delay="100" class="text-4xl md:text-7xl font-extrabold tracking-tight text-slate-900 mb-8 leading-[1.05]">
+                    We build premium <br><span class="text-sky-500">modern websites.</span>
+                </h1>
+                
+                <p data-aos="fade-up" data-aos-delay="200" class="text-slate-500 text-lg md:text-xl max-w-2xl mx-auto mb-12 font-medium">
+                    Maxify Studio is an ambitious development lab focused on turning complex ideas into clean, fast, and high-converting web experiences that scale businesses.
+                </p>
+
+                <div data-aos="fade-up" data-aos-delay="300" class="flex flex-col md:flex-row justify-center gap-4">
+                    <a href="https://wa.me/919361449850" class="btn-primary text-white px-10 py-4 rounded-2xl font-bold text-lg">
+                        <i class="fab fa-whatsapp mr-2"></i> WhatsApp We
+                    </a>
+                    <a href="#work" class="bg-white border border-slate-200 px-10 py-4 rounded-2xl font-bold text-lg hover:bg-slate-50 transition">
+                        Featured Work
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-12 border-y border-slate-100 bg-white overflow-hidden">
+            <div class="tech-track text-slate-400 font-bold text-2xl uppercase tracking-[0.2em] space-x-20">
+                <span>Next.js</span> <span>React</span> <span>Tailwind</span> <span>Firebase</span> <span>PostgreSQL</span>
+                <span>Next.js</span> <span>React</span> <span>Tailwind</span> <span>Firebase</span> <span>PostgreSQL</span>
+            </div>
+        </section>
+
+        <section id="work" class="py-32 px-6 bg-slate-50/50">
+            <div class="max-w-5xl mx-auto">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <span class="text-sky-500 font-bold uppercase tracking-widest text-xs">Case Study</span>
+                    <h2 class="text-4xl md:text-5xl font-extrabold text-slate-900 mt-2">Latest Work Feature</h2>
+                </div>
+
+                <div class="rounded-[2.5rem] border border-slate-200/60 p-4 bg-slate-100/40 shadow-2xl overflow-hidden" data-aos="zoom-in">
+                    <a href="https://hsmodel.vercel.app/" target="_blank" class="group block relative rounded-[2rem] overflow-hidden liquid-glass-preview aspect-video">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80" alt="HS Model Web Platform" class="w-full h-full object-cover transition duration-700 group-hover:scale-105 group-hover:blur-sm">
+                        
+                        <div class="absolute inset-0 bg-slate-950/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-center items-center text-white p-8">
+                            <div class="transform translate-y-4 group-hover:translate-y-0 transition duration-500 text-center">
+                                <span class="bg-sky-500/20 text-sky-300 border border-sky-400/30 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest">Live Platform</span>
+                                <h3 class="text-3xl md:text-4xl font-extrabold mt-4 mb-2">HS Model Production</h3>
+                                <p class="text-white/80 max-w-md mx-auto text-sm md:text-base font-medium mb-6">High-fidelity interfaces crafted beautifully with interactive modern engineering models.</p>
+                                <span class="inline-flex items-center space-x-2 bg-white text-slate-900 px-6 py-3 rounded-xl font-bold text-sm shadow-lg">
+                                    <span>Explore Site</span>
+                                    <i class="fas fa-arrow-up-right-from-square text-xs text-sky-500"></i>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="absolute top-6 left-6 right-6 flex justify-between items-center pointer-events-none">
+                            <div class="bg-white/80 backdrop-blur-md border border-white/40 px-5 py-2.5 rounded-2xl shadow-lg flex items-center space-x-3">
+                                <div class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></div>
+                                <span class="font-bold text-slate-800 text-sm tracking-tight">hsmodel.vercel.app</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="py-32 px-6">
+            <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-center">
+                <div data-aos="fade-right">
+                    <h2 class="text-4xl md:text-5xl font-extrabold mb-8 leading-tight">
+                        Delivering the <br> <span class="text-sky-500">Future of Web</span>
+                    </h2>
+                    <p class="text-slate-500 text-lg mb-10 leading-relaxed">
+                        We specialize in creating websites that aren't just pretty, but perform under pressure. Our focus is on <b>Client Satisfaction</b> and <b>Speed</b>.
+                    </p>
+                    <ul class="space-y-4 font-bold text-slate-700">
+                        <li class="flex items-center space-x-3"><i class="fas fa-check-circle text-sky-500"></i> <span>Mobile-First Responsive Design</span></li>
+                        <li class="flex items-center space-x-3"><i class="fas fa-check-circle text-sky-500"></i> <span>SEO & Performance Optimization</span></li>
+                        <li class="flex items-center space-x-3"><i class="fas fa-check-circle text-sky-500"></i> <span>Clean, Maintainable Codebase</span></li>
+                    </ul>
+                </div>
+                
+                <div class="grid grid-cols-2 gap-4" data-aos="fade-left">
+                    <div class="glass-card p-8 rounded-[2rem]">
+                        <i class="fas fa-bolt text-sky-500 text-3xl mb-4"></i>
+                        <h4 class="font-bold">Fast Delivery</h4>
+                    </div>
+                    <div class="glass-card p-8 rounded-[2rem] mt-8">
+                        <i class="fas fa-shield-heart text-sky-500 text-3xl mb-4"></i>
+                        <h4 class="font-bold">Client Priority</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="pb-32 px-6">
+            <div class="max-w-5xl mx-auto btn-primary rounded-[3rem] p-12 md:p-20 text-center text-white shadow-2xl relative overflow-hidden">
+                <div class="relative z-10">
+                    <h2 class="text-4xl md:text-6xl font-extrabold mb-8">Let's build together.</h2>
+                    <p class="text-white/80 text-xl mb-12 max-w-xl mx-auto">Have an idea? Send a message and we'll get back to you with a plan today.</p>
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <a href="tel:+919361449850" class="bg-white text-sky-600 px-10 py-4 rounded-2xl font-bold hover:scale-105 transition">Call Now</a>
+                        <a href="https://wa.me/919361449850" class="bg-slate-900 text-white px-10 py-4 rounded-2xl font-bold hover:scale-105 transition">WhatsApp</a>
+                    </div>
+                </div>
+                <div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -mr-20 -mt-20"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-20 border-t border-slate-100 text-center">
+        <p class="font-extrabold text-2xl mb-6 tracking-tighter">MAXIFY STUDIO<span class="text-sky-500">.</span></p>
+        <div class="flex justify-center space-x-6 mb-8">
+            <a href="https://www.instagram.com/maxwebworks_?igsh=MXhpdjdwdmw3bG04Yg==" class="text-slate-400 hover:text-sky-500 text-2xl transition"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/919361449850" class="text-slate-400 hover:text-sky-500 text-2xl transition"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        <p class="text-slate-400 text-xs font-bold uppercase tracking-widest">© 2026 Maxify Studio • We Code. You Grow.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+    </script>
+</body>
+  </html>
+  
